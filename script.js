@@ -54,7 +54,7 @@ function showPage(input){
       container.remove();
     }, 1000);
   }
-  //showLoading();
+  showLoading();
 
   if(input === 'start'){
     let logoImg = document.createElement('img');
@@ -86,7 +86,7 @@ function showPage(input){
       content.appendChild(div);
       div.style.backgroundColor = '#f2f2eeff';
       div.style.width = '90%';
-      div.style.height = '40%';
+      div.style.height = '30%';
       div.style.display = 'flex';
       div.style.flexDirection = 'column';
       div.style.alignItems = 'center';
@@ -171,4 +171,5 @@ function showPage(input){
 
 
 //localStorage.removeItem('player1');
+
 //localStorage.removeItem('player2');
