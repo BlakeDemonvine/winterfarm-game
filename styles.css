@@ -1,0 +1,68 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 防止用戶選擇文本 */
+body {
+    background-color: #f5f5e9;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* 防止觸控手勢的縮放 */
+html, body {
+  touch-action: none;
+  overflow: hidden;
+}
+
+
+#content {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  background-color: #f5f5e9;
+}
+
+/* Pokémon TCGP 風格按鈕 */
+#content .mainBtn {
+  padding: 12px 32px;
+  font-size: 20px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(#ffe066, #ffcc33);
+  cursor: pointer;
+  font-weight: 700;
+  box-shadow: 0 4px 0 #d4a526;
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+#content .mainBtn:active {
+  transform: translateY(4px);
+  box-shadow: 0 0 0 #d4a526;
+}
+
+#content .mainInput {
+  padding: 12px 32px;
+  font-size: 20px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(#eee6c9, #e9debf);
+  font-weight: 700;
+  box-shadow: 0 4px 0 #d4a526;
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+  outline: none;  /* 去掉输入框默认的轮廓 */
+}
+
+#content .mainInput:focus {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);  /* 当获得焦点时，增加阴影效果 */
+  transform: scale(1.05);  /* 点击时放大一点 */
+}
